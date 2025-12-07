@@ -30,7 +30,7 @@ df_users = pd.read_csv('users.csv')
 # On convertit le DataFrame en dictionnaire pour le module d'authentification
 credentials = {'usernames': {}}
 for index, row in df_users.iterrows():
-    credentials['usernames'][row['name']] = {
+    credentials['usernames'][row['username']] = {
         'name': row['name'],
         'password': row['password'],
         'email': row['email'],
@@ -95,4 +95,5 @@ elif authentication_status is True:
         with col2:
             st.image("https://static.nationalgeographic.fr/files/styles/image_3200/public/minden_90731712.jpg?w=1600/301/301", caption="tatou 2")
         with col3:
+
             st.image("https://leblogusadedom.com/wp/wp-content/uploads/2016/11/IMG_8960-2-Copier-Copier.jpg", caption="tatou 3")
